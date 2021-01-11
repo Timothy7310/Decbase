@@ -2,12 +2,111 @@
 @media (max-width:1200px)
     .container
         width: 960px
+    .header
+        &__items
+            width: 600px
+        &__button
+            margin-left: 30px
 @media (max-width:992px)
     .container
         width: 700px
+    .header
+        &__wrap
+            flex-wrap: wrap
+        &__button
+            margin-left: 0
+            order: -1
+        &__logo
+            order: -2
+        &__nav
+            flex-basis: 100%
+        &__items
+            margin-top: 40px
+            width: inherit
+            flex-basis: 100%
 @media (max-width:767px)
     .container
         width: 550px
+    body
+        & .lock
+            overflow: hidden
+
+    .header
+        &__logo
+            position: relative
+            z-index: 3
+        &__nav
+            position: fixed
+            z-index: 2
+            top: -100%
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: $white
+            padding-top: 140px
+            overflow: auto
+            transition: all 0.4s ease 0s
+            flex-direction: column
+            &.active
+                top: 0
+        &__items
+            flex-direction: column
+            margin: 16px 0px 16px 0px
+        &__item
+            margin: 20px
+            &--mobile
+                display: block
+        &__link
+            font-size: 21px
+        &__burger
+            display: block
+            position: relative
+            z-index: 3
+            width: 40px
+            height: 30px
+            border: none
+            background-color: transparent
+            cursor: pointer
+            transition: all 0.4s ease-in-out
+            &-span
+                position: absolute
+                width: 100%
+                height: 2px
+                left: 0
+                transition: all 0.4s ease-in-out
+                background-color: $beige
+                &--1
+                    top: 0
+                    &.active
+                        transform: rotate(45deg)
+                        transform-origin: 5%
+                        width: 44px
+                &--2,
+                &--3
+                    top: 13.5px
+                &--2
+                    &.active
+                        transform: translateX(-40px)
+                        background-color: transparent
+                &--3
+                    right: 0
+                    &.active
+                        transform: translateX(40px)
+                        background-color: transparent
+                &--4
+                    bottom: 0
+                    &.active
+                        transform-origin: 5%
+                        transform: rotate(-45deg)
+                        width: 44px
+    .button
+        &-sign-up
+            display: none
+            &--mobile
+                display: block
+                order: 0
+                font-size: 21px
+                padding: 9px 21px 9px 21px
 @media (max-width:576px)
     .container
         width: 90%

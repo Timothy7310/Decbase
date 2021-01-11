@@ -3,11 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Decbase</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="container">
+            <div class="header__wrap">
+                <a href="index.html" class="header__logo">
+                    <picture class="header__logo-img">
+                        <source srcset="img/header/logo@1x.webp 1x,
+                                        img/header/logo@2x.webp 2x" type="image/webp">
+                        <img src="img/header/logo@1x.png" srcset="img/header/logo@2x.png 2x" alt="Logo Decbase">
+                    </picture>
+                </a>
+                <button id="burger" class="header__burger">
+                    <span class="header__burger-span header__burger-span--1"></span>
+                    <span class="header__burger-span header__burger-span--2"></span>
+                    <span class="header__burger-span header__burger-span--3"></span>
+                    <span class="header__burger-span header__burger-span--4"></span>
+                </button>
+                <nav class="header__nav">
+                    <ul class="header__items">
+                        <li class="header__item"><a href="#" class="header__link">Home</a></li>
+                        <li class="header__item"><a href="#" class="header__link">Project</a></li>
+                        <li class="header__item"><a href="#" class="header__link">Services</a></li>
+                        <li class="header__item"><a href="#" class="header__link">About</a></li>
+                        <li class="header__item"><a href="#" class="header__link">Blog</a></li>
+                        <li class="header__item"><a href="#" class="header__link">Shop</a></li>
+                        <li class="header__item"><a href="#" class="header__link">Contact</a></li>
+                        <li class="header__item header__item--mobile"><button class="button-sign-up header__button button-sign-up--mobile">Sign Up</button></li>
+                    </ul>
+                    
+                </nav>
+                <button class="button-sign-up header__button">Sign Up</button>
+            </div>
+        </div>
+    </header>
     <script src="/node_modules/focus-visible/dist/focus-visible.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
