@@ -9,8 +9,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600&display=swap"
         rel="stylesheet">
-
-    
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+   
     <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -172,7 +172,65 @@
                         <span class="service__subtitle">What we do</span>
                         <h2 class="service__title">Our Service</h2>
                     </div>
-                    <ul class="service__items">
+
+                    
+                    <div class="service__buttons">
+                        <button class="service__button service__button-prev">
+                            <svg class="service__button-img">
+                                <use xlink:href="img/sprite.svg#prev"></use>
+                            </svg>
+                        </button>
+                        <button class="service__button service__button-next">
+                            <svg class="service__button-img">
+                                <use xlink:href="img/sprite.svg#next"></use>
+                            </svg>
+                        </button>
+                    </div>
+                   <div class="slider-wrap">
+                        <!-- Slider main container -->
+                        <div class="swiper-container service-slider">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="service__item">
+                                        <img src="img/section-slider/Inrerior.svg" class="service__img" alt="">
+                                        <div class="service-text">
+                                            <h3 class="service-text__title">Interior Design</h3>
+                                            <p class="service-text__info">Lorem ipsum dolor amet consectetur
+                                                adipiscing elit sed eiusmod tempor
+                                                incididunt ut labore.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="service__item service__item--main">
+                                        <img src="img/section-slider/architecture.svg" class="service__img" alt="">
+                                        <div class="service-text">
+                                            <h3 class="service-text__title service-text__title--main">Interior Design</h3>
+                                            <p class="service-text__info service-text__info--main">Lorem ipsum dolor amet consectetur
+                                                adipiscing elit sed eiusmod tempor
+                                                incididunt ut labore.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="service__item">
+                                        <img src="img/section-slider/planning.svg" class="service__img" alt="">
+                                        <div class="service-text">
+                                            <h3 class="service-text__title">Interior Design</h3>
+                                            <p class="service-text__info">Lorem ipsum dolor amet consectetur
+                                                adipiscing elit sed eiusmod tempor
+                                                incididunt ut labore.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        </div>
+                   </div>
+
+                    <!-- <ul class="service__items">
                         <li class="service__item">
                             <img src="img/section-slider/Inrerior.svg" class="service__img" alt="">
                             <div class="service-text">
@@ -200,11 +258,12 @@
                                     incididunt ut labore.</p>
                             </div>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </section>
-    
+        
+        
     
     <script src="js/main.min.js"></script>
     

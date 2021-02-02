@@ -4,59 +4,50 @@ $(function(){
         $('body').toggleClass('lock');
     });
 
-    let position = 0;
-    const slidesToShow = 3;
-    const slidesToScroll = 2;
-    const container = $('.slider-container');
-    const track = $('.slider-track');
-    const item = $('.slider-item');
-    const btnPrev = $('.btn-prev');
-    const btnNext = $('.btn-next');
-    const itemsCount = item.length;
-    const itemWidth = container.width() / slidesToShow;
-    const movePosition = slidesToScroll * itemWidth;
+    var sliderService = new Swiper('.service-slider ', {
+  // Optional parameters
+  
+  centeredSlides: true,
+  loop: true,
 
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
-    item.each(function(index,item){
-        $(item).css({
-            minWidth: itemWidth,
-        });
-    });
+  // Navigation arrows
+  navigation: {
+    nextEl: '.service__button-next',
+    prevEl: '.service__button-prev',
+  },
 
-    
+  breakpoints: {
+    1500:{
+        slidesPerView: 3,
+        spaceBetween: 37
+    },
+    1200: {
+        slidesPerView: 3, 
+        spaceBetween: 20
+        
+       
+    },
+    992: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+       
+        centeredSlides: false,
+       
+        
+        
+    },
+    767: {
+        slidesPerView: 1
+        
+    },
+  },
 
-    btnNext.click(function(){
-        const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
+  
+})
 
-        position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-
-        setPosition();
-        checkBtns();
-    });
-
-    btnPrev.click(function(){
-        const itemsLeft = Math.abs(position) / itemWidth;
-
-        position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-
-        setPosition();
-        checkBtns();
-    });
-
-
-    const setPosition = () => {
-        track.css({
-            transform: `translateX(${position}px)` 
-        });
-    };
-
-    const checkBtns = () => {
-        btnPrev.prop('disabled', position === 0);
-        btnNext.prop(
-            'disabled', 
-            position <= -(itemsCount - slidesToShow) * itemWidth
-        );
-    };
-
-    checkBtns();
 });
