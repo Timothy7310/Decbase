@@ -1,8 +1,11 @@
 
 @media (max-width:1500px)
-    .card__img-wrap
-        width: 517px
-        height: 426px
+    .card
+        &__img-wrap
+            width: 517px
+            height: 426px
+        &__number
+            font-size: 235px
     .service
         &__item
             // width: 335px
@@ -55,10 +58,24 @@
             &--main
                 margin-right: 0px
                 margin-bottom: 50px
+            &--about-us
+                margin-left: 0
+            &--number
+                margin-right: 0px
         &__title
             &--main
                 font-size: 50px
                 line-height: 72px
+        &__img-wrap
+            &--left-up
+                order: 1
+                margin-top: 70px
+                &::after
+                    top: 24px
+                    left: 26px
+
+            &--about-us
+                margin-top: 70px
 
 @media (max-width:767px)
     .container
@@ -148,13 +165,14 @@
             &--main
                 font-size: 40px
                 line-height: 65px
+            &--about-us
+                font-size: 40px
+            &--number
+                font-size: 40px
         &__text
             &--main
                 width: 550px
-        &__img-wrap
-            &::after
-                bottom: -25px
-                right: -18px
+
     .service
         &__title
             font-size: 38px
@@ -166,23 +184,34 @@
         &__text
             display: flex
             flex-direction: column
+            width: 90%
             &--main
-                width: 90%
+
         &__img-wrap
             width: 100%
             height: inherit
             &::after
                 right: -9px
                 bottom: -17px
+            &--left-up
+                &::after
+                    top: 12px
+                    left: 7px
         &__title
             &--main
+                font-size: 32px
+                line-height: 44px
+            &--about-us
+                font-size: 32px
+                line-height: 44px
+            &--number
                 font-size: 32px
                 line-height: 44px
         &__subtitle
             font-size: 18px
         &__info
             font-size: 16px
-    .button-contact
+    .button
         align-self: center
     .service
         &__title
