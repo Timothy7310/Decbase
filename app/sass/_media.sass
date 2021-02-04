@@ -34,6 +34,8 @@
         padding: 0px 0px 236px 0px
         &__item
             width: 425px
+    .statistic
+        padding: 0px 0px 0px 0px
 
 @media (max-width:992px)
     .container
@@ -76,6 +78,16 @@
 
             &--about-us
                 margin-top: 70px
+    .statistic
+        &-list
+            align-items: center
+            justify-content: center
+            max-width: inherit
+        &-card
+            flex-basis: 40%
+            margin: 20px
+            &:nth-child(2n)
+                align-self: center
 
 @media (max-width:767px)
     .container
@@ -175,8 +187,11 @@
 
     .service
         &__title
-            font-size: 38px
+            font-size: 40px
             line-height: 65px
+    .statistic
+        &__title
+            font-size: 40px
 @media (max-width:576px)
     .container
         width: 90%
@@ -215,7 +230,7 @@
         align-self: center
     .service
         &__title
-            font-size: 30px
+            font-size: 32px
             line-height: 50px
         &-text
             &__title
@@ -226,3 +241,7 @@
             width: 250px
         &__button
             margin-bottom: 30px
+    .statistic
+        &__title
+            font-size: 32px
+            line-height: 44px
