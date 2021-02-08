@@ -10,11 +10,7 @@ $(function(){
   centeredSlides: true,
   loop: true,
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
+  
   // Navigation arrows
   navigation: {
     nextEl: '.service__button-next',
@@ -24,11 +20,11 @@ $(function(){
   breakpoints: {
     1500:{
         slidesPerView: 3,
-        spaceBetween: 37
+        spaceBetween: 37,
     },
     1200: {
         slidesPerView: 3, 
-        spaceBetween: 20
+        spaceBetween: 20,
         
        
     },
@@ -42,12 +38,34 @@ $(function(){
         
     },
     767: {
-        slidesPerView: 1
+        slidesPerView: 1,
         
     },
   },
 
   
-})
+});
+
+
+var sliderClients = new Swiper('.clients-slider ', {
+  // Optional parameters
+  
+ 
+  loop: true,
+ 
+  slidesPerView: 2,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.clients__button-next',
+    prevEl: '.clients__button-prev',
+  },
+
+  
+
+  
+});
+
+
 
 });
