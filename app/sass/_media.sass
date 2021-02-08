@@ -11,6 +11,15 @@
             // width: 335px
             // width: inherit
             width: 28vw
+    .card
+        &__text
+            &--news
+                width: 500px
+        &__img-wrap
+            &--news
+                width: 417px
+                height: 326px
+
 @media (max-width:1200px)
     .container
         width: 960px
@@ -27,9 +36,22 @@
         &__img-wrap
             width: 517px
             height: 426px
+            &::after
+                bottom: -17px
+                right: -14px
+            &--left-up
+                &::after
+                    top: -14px
+                    left: -12px
+            &--news
+                width: 417px
+                height: 326px
         &__title
             &--main
                 font-size: 55px
+        &__text
+            &--news
+                width: 425px
     .service
         padding: 0px 0px 236px 0px
         &__item
@@ -38,6 +60,8 @@
         padding: 0px 0px 0px 0px
     .clients
         padding: 163px 0px 183px 0px
+    .news
+        padding: 93px 0px 123px 0px
 
 @media (max-width:992px)
     .container
@@ -66,6 +90,11 @@
                 margin-left: 0
             &--number
                 margin-right: 0px
+            &--news
+                display: flex
+                flex-direction: column
+                align-items: center
+                width: 500px
         &__title
             &--main
                 font-size: 50px
@@ -80,6 +109,10 @@
 
             &--about-us
                 margin-top: 70px
+            &--news
+                align-self: center
+                width: 517px
+                height: 426px
     .statistic
         &-list
             align-items: center
@@ -90,6 +123,14 @@
             margin: 20px
             &:nth-child(2n)
                 align-self: center
+    .news
+        &__cards
+            flex-direction: column
+        &__card
+            margin-bottom: 50px
+            margin-top: 50px
+        &__title
+            margin: 21px 0px 55px 0px
 
 @media (max-width:767px)
     .container
@@ -207,7 +248,10 @@
                 font-size: 21px
             &__prof
                 font-size: 13px
-@media (max-width:576px)
+    .news
+        &__title
+            font-size: 40px
+@media (max-width:590px)
     .container
         width: 90%
     .card
@@ -290,3 +334,8 @@
             top: 20px
         &__avatar
             position: static
+    .news
+        &__subtitle
+            font-size: 18px
+        &__title
+            font-size: 32px
