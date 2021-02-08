@@ -53,7 +53,6 @@ var sliderClients = new Swiper('.clients-slider ', {
  
   loop: true,
  
-  slidesPerView: 2,
 
   // Navigation arrows
   navigation: {
@@ -61,7 +60,31 @@ var sliderClients = new Swiper('.clients-slider ', {
     prevEl: '.clients__button-prev',
   },
 
-  
+   breakpoints: {
+    1500:{
+        slidesPerView: 2,
+        spaceBetween: 37,
+    },
+    1200: {
+        slidesPerView: 1, 
+        
+        
+       
+    },
+    992: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+       
+        centeredSlides: false,
+       
+        
+        
+    },
+    767: {
+        slidesPerView: 1,
+        
+    },
+  },
 
   
 });
