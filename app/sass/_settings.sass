@@ -45,3 +45,18 @@ img
                 background-color: $green
                 .service__button-img
                     stroke: $white
+    .footer
+        &-links__item
+            transition: .4s ease-in-out
+            &:hover
+                background-color: $green
+        &__logo-img
+            transition: .4s ease-in-out
+            &:hover
+                opacity: 0.7
+        &__link
+            transition: .4s ease-in-out
+            &:hover
+                &::after
+                    width: 100%
+                    transition: ease 0.5s
