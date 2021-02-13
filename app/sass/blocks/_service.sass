@@ -67,6 +67,8 @@
         width: 40px
         height: 40px
         margin-right: 16px
+        fill: #000000
+        flex-shrink: 0
 .swiper
     &-slide
         padding-bottom: 30px
@@ -88,3 +90,17 @@
             width: 4px
             height: 9px
             stroke: #646464
+.swiper-slide-active
+    & > .service__item
+        transition: .5s ease
+        background-color: $beige
+        & > .service__img
+            transition: .5s ease
+            fill: $white
+        & > .service-text
+            & > .service-text__title
+                transition: .5s ease
+                color: $white
+            & > .service-text__info
+                transition: .5s ease
+                color: $white

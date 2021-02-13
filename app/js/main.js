@@ -7,7 +7,7 @@ $(function(){
     var sliderService = new Swiper('.service-slider ', {
   // Optional parameters
   
-  centeredSlides: true,
+  
   loop: true,
 
   
@@ -19,10 +19,12 @@ $(function(){
 
   breakpoints: {
     1500:{
+        centeredSlides: true,
         slidesPerView: 3,
         spaceBetween: 37,
     },
     1200: {
+        centeredSlides: true,
         slidesPerView: 3, 
         spaceBetween: 20,
         
