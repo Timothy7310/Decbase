@@ -91,6 +91,43 @@ var sliderClients = new Swiper('.clients-slider ', {
   
 });
 
+var modalButton = $('[data-toggle=modal]');
+var closeModalButton = $('.button-close');
+modalButton.on('click', openModal);
+closeModalButton.on('click', closeModal);
 
+
+function openModal() {
+  var modalOverlay = $('.modal__overlay');
+  var modalDialog = $('.modal__dialog');
+  modalOverlay.addClass('modal__overlay--visible');
+  modalDialog.addClass('modal__dialog--visible');
+}
+
+function closeModal() {
+  var modalOverlay = $('.modal__overlay');
+  var modalDialog = $('.modal__dialog');
+  modalOverlay.removeClass('modal__overlay--visible');
+  modalDialog.removeClass('modal__dialog--visible');
+}
+
+
+// проверка на пустоту заполненных полей
+$('.form-modal').submit(function(){
+  if(document.forms.email.value == '' || document.form.password.value == ""){
+    valid = false;
+    return valid;
+  } else{
+    closeModal();
+  }
+});
+
+// Закрытие на esc
+$(document).keydown(function (e) {
+    // ESCAPE key pressed
+    if (e.keyCode == 27) {
+      closeModal()
+    }
+  });
 
 });

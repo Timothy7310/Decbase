@@ -50,7 +50,7 @@
                     </ul>
                     
                 </nav>
-                <button class="button-sign-up header__button">Sign Up</button>
+                <button data-toggle="modal" class="button-sign-up header__button">Sign Up</button>
             </div>
         </div>
     </header>
@@ -494,7 +494,12 @@
                     </p>
                     <form action="send.php" method="POST" class="form">
                         <div class="form__input-wrap">
-                            <input type="email" name="email" placeholder="Enter your email address....." class="form__input">
+                            <input
+                                type="email"
+                                name="email" 
+                                placeholder="Enter your email address....." 
+                                class="form__input"
+                                required>
                         </div>
                         <button class="button button--subscribe">Subscribe</button>
                     </form>
@@ -592,6 +597,31 @@
                 </div>
             </div>
         </footer>
+        <div class="modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__dialog">
+                <button class="button-close">
+                    <!-- <svg class="button-close__img">
+                        <use xlink:href="img/sprite.svg#"></use>
+                    </svg> -->
+                    <img src="img/modal/cancel.svg" alt="">
+                </button>
+                
+                <form    class="form form-modal">
+                    <div class="form__field">
+                        <label for="email_field" class="form__field-label">E-mail:</label>
+                        <input type="email" name="email" id="email_field" 
+                            class="form__field-input" required>
+                    </div>
+                    <div class="form__field">
+                        <label for="password_field" class="form__field-label">Password:</label>
+                        <input type="password" name="password" id="password_field" 
+                            class="form__field-input" required>
+                    </div>
+                    <button class="button button--modal">Sign Up</button>
+                </form>
+            </div>
+        </div>
     <script src="js/main.min.js"></script>
     
 </body>
