@@ -27,6 +27,13 @@ img
             &:hover
                 background-color: darken($green, 8%)
                 color: lighten($white, 8% )
+        &-close
+            &__img
+                transition: .4s ease-in-out
+            &:hover
+                & .button-close__img
+
+                    stroke: $green
     .header
         &__link
             transition: .3s ease

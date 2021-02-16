@@ -102,6 +102,7 @@ function openModal() {
   var modalDialog = $('.modal__dialog');
   modalOverlay.addClass('modal__overlay--visible');
   modalDialog.addClass('modal__dialog--visible');
+  $('html').addClass('hystmodal-opened');
 }
 
 function closeModal() {
@@ -109,6 +110,7 @@ function closeModal() {
   var modalDialog = $('.modal__dialog');
   modalOverlay.removeClass('modal__overlay--visible');
   modalDialog.removeClass('modal__dialog--visible');
+  $('html').removeClass('hystmodal-opened');
 }
 
 
@@ -129,5 +131,7 @@ $(document).keydown(function (e) {
       closeModal()
     }
   });
+
+  
 
 });

@@ -180,9 +180,13 @@
         &__input
             width: 100%
             padding-right: 180px
+        &-modal
+            width: 100%
+
     .footer
         &__info
             width: inherit
+
 @media (max-width:767px)
     .container
         width: 550px
@@ -319,6 +323,11 @@
     .form
         &__input
             font-size: 17px
+        &__field
+            &-label
+                font-size: 16px
+            &-input
+                height: 50px
     .footer
         &__wrap
             grid-template-columns: repeat(2, minmax(min-content, 1fr))
@@ -342,6 +351,9 @@
 
         &__bottom
             grid-column: 1 / 3
+    .modal
+        &__dialog
+            padding: 65px 40px
 
 @media (max-width:590px)
     .container
@@ -449,6 +461,8 @@
             padding-right: 20px
             padding-left: 20px
             font-size: 14px
+        &__field
+            width: 100%
     .subscribe
         &__title
             font-size: 32px
@@ -485,3 +499,13 @@
 
         &__bottom
             grid-column: 1
+    .modal
+        &__dialog
+            width: 90%
+            padding: 60px 30px
+
+@media (max-height:480px)
+    .modal
+        &__dialog
+            height: 90%
+            overflow-y: scroll

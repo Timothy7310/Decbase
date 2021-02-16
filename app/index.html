@@ -46,7 +46,7 @@
                         <li class="header__item"><a href="#" class="header__link">Blog</a></li>
                         <li class="header__item"><a href="#" class="header__link">Shop</a></li>
                         <li class="header__item"><a href="#" class="header__link">Contact</a></li>
-                        <li class="header__item header__item--mobile"><button class="button-sign-up header__button button-sign-up--mobile">Sign Up</button></li>
+                        <li class="header__item header__item--mobile"><button data-toggle="modal" class="button-sign-up header__button button-sign-up--mobile">Sign Up</button></li>
                     </ul>
                     
                 </nav>
@@ -600,11 +600,11 @@
         <div class="modal">
             <div class="modal__overlay"></div>
             <div class="modal__dialog">
-                <button class="button-close">
-                    <!-- <svg class="button-close__img">
-                        <use xlink:href="img/sprite.svg#"></use>
-                    </svg> -->
-                    <img src="img/modal/cancel.svg" alt="">
+                <button class="button-close" aria-label="Close Sign Up window." >
+                    <svg class="button-close__img">
+                        <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                    
                 </button>
                 
                 <form    class="form form-modal">
