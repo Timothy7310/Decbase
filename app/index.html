@@ -31,7 +31,7 @@
                             srcset="img/header/logo@2x.png 2x" alt="Logo Decbase.">
                     </picture>
                 </a>
-                <button id="burger" class="header__burger">
+                <button id="burger" class="header__burger" aria-label="Menu." aria-controls="navigation">
                     <span class="header__burger-span header__burger-span--1"></span>
                     <span class="header__burger-span header__burger-span--2"></span>
                     <span class="header__burger-span header__burger-span--3"></span>
@@ -240,9 +240,9 @@
                     <ul class="statistic-list statistic-list--mb">
                         <li class="statistic-card">
                             <div class="statistic-card__text">
-                                <h3 class="statistic-card__number">
+                                <span class="statistic-card__number">
                                     980
-                                </h3>
+                                </span>
                                 <span class="statistic-card__name">
                                     Project
                                 </span>
@@ -250,9 +250,9 @@
                         </li>
                         <li class="statistic-card">
                             <div class="statistic-card__text">
-                                <h3 class="statistic-card__number">
+                                <span class="statistic-card__number">
                                     520
-                                </h3>
+                                </span>
                                 <span class="statistic-card__name">
                                 Happy Client
                                 </span>
@@ -260,9 +260,9 @@
                         </li>
                         <li class="statistic-card">
                             <div class="statistic-card__text">
-                                <h3 class="statistic-card__number">
+                                <span class="statistic-card__number">
                                     330
-                                </h3>
+                                </span>
                                 <span class="statistic-card__name">
                                     Winners
                                 </span>
@@ -270,9 +270,9 @@
                         </li>
                         <li class="statistic-card">
                             <div class="statistic-card__text">
-                                <h3 class="statistic-card__number">
+                                <span class="statistic-card__number">
                                     120
-                                </h3>
+                                </span>
                                 <span class="statistic-card__name">
                                     Recoment
                                 </span>
@@ -432,7 +432,7 @@
                         From Our Blog
                     </h2>
                     <div class="news__cards">
-                        <div class="news__card card">
+                        <article class="news__card card">
                         
                             <div class="card__img-wrap card__img-wrap--news">
                                 <picture>
@@ -454,8 +454,8 @@
                                 <button class="button button--continue">Continue Reading....</button>
                             </div>
                             <!-- /.card__text -->
-                        </div>
-                        <div class="news__card card">
+                        </article>
+                        <article class="news__card card">
                         
                             <div class="card__img-wrap card__img-wrap--news">
                                 <picture>
@@ -478,7 +478,7 @@
                                 <button class="button button--continue">Continue Reading....</button>
                             </div>
                             <!-- /.card__text -->
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -558,7 +558,7 @@
                         <h3 class="footer__list-title">Follow Us</h3>
                         <ul class="footer-links">
                             <li class="footer-links__item">
-                                <a href="https://ru-ru.facebook.com/" target="_blank"rel="nofollow noopener" aria-label="Facebook" class="footer-links__link">
+                                <a href="https://ru-ru.facebook.com/" target="_blank" rel="nofollow noopener" aria-label="Facebook" class="footer-links__link">
                                     <svg class="footer-links__img">
                                         <use xlink:href="img/sprite.svg#fb"></use>
                                     </svg>
@@ -572,7 +572,7 @@
                                 </a>
                             </li>
                             <li class="footer-links__item">
-                                <a href="https://www.instagram.com/" target="_blank"rel="nofollow noopener" aria-label="Instagram" class="footer-links__link">
+                                <a href="https://www.instagram.com/" target="_blank" rel="nofollow noopener" aria-label="Instagram" class="footer-links__link">
                                     <svg class="footer-links__img">
                                         <use xlink:href="img/sprite.svg#instagram"></use>
                                     </svg>
@@ -600,7 +600,7 @@
         <div class="modal">
             <div class="modal__overlay"></div>
             <div class="modal__dialog">
-                <button class="button-close" aria-label="Close Sign Up window." >
+                <button class="button-close" aria-label="Close Sign Up window." autofocus >
                     <svg class="button-close__img">
                         <use xlink:href="img/sprite.svg#close"></use>
                     </svg>
