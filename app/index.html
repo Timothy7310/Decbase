@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decbase</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-   
+
+    <link rel="preload" href="fonts/Open-Sans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Open-Sans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Open-Sans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+
+
     <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -31,7 +33,7 @@
                             srcset="img/header/logo@2x.png 2x" alt="Logo Decbase.">
                     </picture>
                 </a>
-                <button id="burger" class="header__burger" aria-label="Menu." aria-controls="navigation">
+                <button id="burger" class="header__burger" aria-label="Menu.">
                     <span class="header__burger-span header__burger-span--1"></span>
                     <span class="header__burger-span header__burger-span--2"></span>
                     <span class="header__burger-span header__burger-span--3"></span>
@@ -46,11 +48,11 @@
                         <li class="header__item"><a href="#" class="header__link">Blog</a></li>
                         <li class="header__item"><a href="#" class="header__link">Shop</a></li>
                         <li class="header__item"><a href="#" class="header__link">Contact</a></li>
-                        <li class="header__item header__item--mobile"><button data-toggle="modal" class="button-sign-up header__button button-sign-up--mobile">Sign Up</button></li>
+                        <li class="header__item header__item--mobile"><button  class="button-sign-up header__button button-sign-up--mobile modal-toggle--mb"  >Sign Up</button></li>
                     </ul>
                     
                 </nav>
-                <button data-toggle="modal" class="button-sign-up header__button">Sign Up</button>
+                <button  class="button-sign-up header__button modal-toggle" >Sign Up</button>
             </div>
         </div>
     </header>
@@ -442,7 +444,7 @@
                                     <img src="img/section-news/news-1@1x.jpg"
                                         class="card__img"
                                         srcset="img/section-news/news-1@2x.jpg 2x"
-                                        alt="Living room with kitchen in gray and red tones">
+                                        alt="Living room with kitchen in gray and red tones.">
                                 </picture>
                             </div>
                             <div class="card__text card__text--news">
@@ -597,10 +599,10 @@
                 </div>
             </div>
         </footer>
-        <div class="modal">
+        <div class="modal" >
             <div class="modal__overlay"></div>
-            <div class="modal__dialog">
-                <button class="button-close" aria-label="Close Sign Up window." autofocus >
+            <div class="modal__dialog" >
+                <button class="button-close" id="button-close" aria-label="Close Sign Up window." autofocus >
                     <svg class="button-close__img">
                         <use xlink:href="img/sprite.svg#close"></use>
                     </svg>

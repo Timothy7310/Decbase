@@ -1,15 +1,11 @@
 $(function(){
 
- 
-
-
-
     $('#burger').click(function (event) {
         $('.header__burger, .header__burger-span, .header__nav').toggleClass('active');
         $('body').toggleClass('lock');
     });
 
-    var sliderService = new Swiper('.service-slider ', {
+  var sliderService = new Swiper('.service-slider ', {
   // Optional parameters
   
   
@@ -96,26 +92,85 @@ var sliderClients = new Swiper('.clients-slider ', {
   
 });
 
-var modalButton = $('[data-toggle=modal]');
-var closeModalButton = $('.button-close');
-modalButton.on('click', openModal);
-closeModalButton.on('click', closeModal);
+
+
+var modalToggle = document.querySelector('.modal-toggle');
+var modalToggleMobile = document.querySelector('.modal-toggle--mb');
+modalToggle.addEventListener('click', openModal);
+modalToggleMobile.addEventListener('click', openModal);
+
+var closeModalButton = document.querySelector('.button-close');
+closeModalButton.addEventListener('click', closeModal);
+
+ 
+// Настройка фокуса в модальном окне
+
+var focusedElementBeforeModal;
+
+var modal = document.querySelector('.modal__dialog');
+var modalOverlay = document.querySelector('.modal__overlay');
+
 
 
 function openModal() {
-  var modalOverlay = $('.modal__overlay');
-  var modalDialog = $('.modal__dialog');
-  modalOverlay.addClass('modal__overlay--visible');
-  modalDialog.addClass('modal__dialog--visible');
-  $('html').addClass('hystmodal-opened');
+  var modalOverlay = document.querySelector('.modal__overlay');
+  var modalDialog = document.querySelector('.modal__dialog');
+  modalOverlay.classList.add("modal__overlay--visible")
+  modalDialog.classList.add("modal__dialog--visible");
+  document.querySelector('html').classList.add("hystmodal-opened");
+  // Сохранение фокуса
+  focusedElementBeforeModal = document.activeElement;
+
+  modal.addEventListener('keydown', trapTabKey);
+
+  // Закрытие при клике вне формы
+  modalOverlay.addEventListener('click', closeModal);
+
+  // Находим все элементы для фокуса 
+  var focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
+  var focusableElements = modal.querySelectorAll(focusableElementsString);
+  // // Convert NodeList to Array
+  focusableElements = Array.prototype.slice.call(focusableElements);
+
+  var firstTabStop = focusableElements[0];
+  var lastTabStop = focusableElements[focusableElements.length - 1];
+  firstTabStop.focus();
+
+  function trapTabKey(e) {
+    // Check for TAB key press
+    if (e.keyCode === 9) {
+
+      // SHIFT + TAB
+      if (e.shiftKey) {
+        if (document.activeElement === firstTabStop) {
+          e.preventDefault();
+          lastTabStop.focus();
+        }
+
+      // TAB
+      } else {
+        if (document.activeElement === lastTabStop) {
+          e.preventDefault();
+          firstTabStop.focus();
+        }
+      }
+    }
+  }
+
 }
 
+
 function closeModal() {
-  var modalOverlay = $('.modal__overlay');
-  var modalDialog = $('.modal__dialog');
-  modalOverlay.removeClass('modal__overlay--visible');
-  modalDialog.removeClass('modal__dialog--visible');
-  $('html').removeClass('hystmodal-opened');
+ 
+  var modalOverlay = document.querySelector('.modal__overlay');
+  var modalDialog = document.querySelector('.modal__dialog');
+  
+  modalOverlay.classList.remove("modal__overlay--visible");
+  modalDialog.classList.remove("modal__dialog--visible");
+  document.querySelector('html').classList.remove("hystmodal-opened");
+  
+  // Set focus back to element that had it before the modal was opened
+  focusedElementBeforeModal.focus();
 }
 
 
@@ -137,9 +192,11 @@ $(document).keydown(function (e) {
     }
   });
 
- $('.modal__overlay').on('click', closeModal); 
- 
+
+
+
 
 
 
 });
+

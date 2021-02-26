@@ -67,6 +67,8 @@ function styles() {
         .pipe(browserSync.stream())
 }
 
+
+
 function build() {
     return src([
         'app/css/style.min.css',
@@ -85,6 +87,7 @@ function watching() {
 
 
 exports.styles      = styles;
+
 exports.watching    = watching;
 exports.browsersync = browsersync;
 exports.scripts     = scripts;
